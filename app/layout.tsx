@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ChatRelay",
-  description: "WhatsApp Automation Platform",
+  title: "ChatRelay – WhatsApp Automation Platform",
+  description: "Send WhatsApp messages, automate campaigns, and grow your business with ChatRelay.",
 };
 
 export default function RootLayout({
