@@ -429,10 +429,13 @@ export default function HomePage() {
     setSubmitting(true);
     setSubmitError(false);
     try {
-      const res = await fetch("/api/enquiry", {
+      const controller = new AbortController();
+setTimeout(() => controller.abort(), 10000);
+      const res = await fetch("https://api.chatrelay.in/api/enquiry", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formState),
+        signal: controller.signal,
       });
       if (res.ok) {
         setSubmitted(true);
